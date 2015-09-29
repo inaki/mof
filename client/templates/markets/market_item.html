@@ -1,0 +1,15 @@
+<template name="marketItem">
+  <div class="market">
+    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+    <div class="market-content">
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <p>
+        {{pluralize votes "Vote"}},
+        submitted by {{author}},
+        <a href="{{pathFor 'marketPage'}}">{{pluralize commentsCount "comment"}}</a>
+        {{#if ownMarket}}<a href="{{pathFor 'marketEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+    <a href="{{pathFor 'marketPage'}}" class="discuss btn btn-default">Discuss</a>
+  </div>
+</template>
