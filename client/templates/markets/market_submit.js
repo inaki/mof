@@ -16,12 +16,21 @@ Template.marketSubmit.events({
     e.preventDefault();
 
     var market = {
+      title: $(e.target).find('[name=title]').val(),
       url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      description: $(e.target).find('[name=description]').val(),
+      organizer: $(e.target).find('[name=organizer]').val(),
+      phone: $(e.target).find('[name=phone]').val(),
+      email: $(e.target).find('[name=email]').val(),
+      address: $(e.target).find('[name=address]').val(),
+      city: $(e.target).find('[name=city]').val(),
+      zipcode: $(e.target).find('[name=zipcode]').val(),
+      ccard: $(e.target).find('[name=ccard]').val(),
+      ebtcard: $(e.target).find('[name=ebtcard]').val(),
     };
-    
+
     var errors = validatePost(market);
-    if (errors.title || errors.url)
+    if (errors.title || errors.description )
       return Session.set('marketSubmitErrors', errors);
 
     Meteor.call('marketInsert', market, function(error, result) {

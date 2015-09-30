@@ -18,12 +18,21 @@ Template.marketEdit.events({
     var currentMarketId = this._id;
 
     var marketProperties = {
+      title: $(e.target).find('[name=title]').val(),
       url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      description: $(e.target).find('[name=description]').val(),
+      organizer: $(e.target).find('[name=organizer]').val(),
+      phone: $(e.target).find('[name=phone]').val(),
+      email: $(e.target).find('[name=email]').val(),
+      address: $(e.target).find('[name=address]').val(),
+      city: $(e.target).find('[name=city]').val(),
+      zipcode: $(e.target).find('[name=zipcode]').val(),
+      ccard: $(e.target).find('[name=ccard]').val(),
+      ebtcard: $(e.target).find('[name=ebtcard]').val(),
     }
 
-    var errors = validateMarket(marketProperties);
-    if (errors.title || errors.url)
+    var errors = validatePost(marketProperties);
+    if (errors.title || errors.description)
       return Session.set('marketEditErrors', errors);
 
     Markets.update(currentMarketId, {$set: marketProperties}, function(error) {

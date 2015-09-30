@@ -1,17 +1,25 @@
 <template name="marketsList">
   <div class="markets page">
-    <div class="wrapper">
-      {{#each markets}}
-        {{> marketItem}}
-      {{/each}}
+    <div class="row">
+      <div class="col-md-6">
+        {{> map }}
+      </div>
+      <div class="col-md-6">
+        <div class="wrapper">
+          {{#each markets}}
+            {{> marketItem}}
+          {{/each}}
+        </div>
+      </div>
+      <div class="col-md-12">
+        {{#if nextPath}}
+          <a class="load-more" href="{{nextPath}}">Load more</a>
+        {{else}}
+          {{#unless ready}}
+            {{> spinner}}
+          {{/unless}}
+        {{/if}}
+      </div>
+      </div>
     </div>
-
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{else}}
-      {{#unless ready}}
-        {{> spinner}}
-      {{/unless}}
-    {{/if}}
-  </div>
 </template>

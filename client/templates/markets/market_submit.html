@@ -1,18 +1,59 @@
 <template name="marketSubmit">
   <form class="main form page">
-    <div class="form-group {{errorClass 'url'}}">
-      <label class="control-label" for="url">URL</label>
-      <div class="controls">
-          <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
-          <span class="help-block">{{errorMessage 'url'}}</span>
-      </div>
-    </div>
     <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>
-      <div class="controls">
-          <input name="title" id="title" type="text" value="" placeholder="Name your market" class="form-control"/>
-          <span class="help-block">{{errorMessage 'title'}}</span>
-      </div>
+      <input name="title" id="title" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'title'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'url'}}">
+      <label class="control-label" for="url">website</label>
+      <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
+      <span class="help-block">{{errorMessage 'url'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'description'}}">
+      <label class="control-label" for="description">Description</label>
+      <input name="description" id="description" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'description'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'organizer'}}">
+      <label class="control-label" for="organizer">Organizer</label>
+      <input name="organizer" id="organizer" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'organizer'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'phone'}}">
+      <label class="control-label" for="phone">Phone</label>
+      <input name="phone" id="phone" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'phone'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'email'}}">
+      <label class="control-label" for="email">Email</label>
+      <input name="email" id="email" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'email'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'address'}}">
+      <label class="control-label" for="address">address</label>
+      <input name="address" id="address" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'address'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'city'}}">
+      <label class="control-label" for="city">city</label>
+      <input name="city" id="city" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'city'}}</span>
+    </div>
+    <div class="form-group {{errorClass 'zipcode'}}">
+      <label class="control-label" for="zipcode">zipcode</label>
+      <input name="zipcode" id="zipcode" type="text" value="" placeholder="Name your market" class="form-control"/>
+      <span class="help-block">{{errorMessage 'zipcode'}}</span>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked="{{accepted}}" name="ccard" id="ccard"> Credit Card Accepted
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked="{{accepted}}" name="ebtcard" id="ebtcard"> EBT Card Accepted
+      </label>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
   </form>

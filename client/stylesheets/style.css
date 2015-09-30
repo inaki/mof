@@ -13,6 +13,7 @@ body {
 
 #main {
   position: relative;
+  margin-top: 50px;
 }
 .page {
   position: absolute;
@@ -21,10 +22,30 @@ body {
 }
 
 .navbar {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  background-color: #4CAF50;
+  border-bottom: 5px solid #388E3C;}
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px; }
+  .navbar-inverse .navbar-brand {
+    color: white;}
+  .btn-primary {
+    color: #FFF;
+    background-color: #FF3A7F;
+    border-color: #FF3A7F;}
+    .btn-primary:hover {
+      color: #FFF;
+      background-color: #FF3A7F;
+      border-color: #FF3A7F;
+      -webkit-box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);
+-moz-box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);
+box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);}
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+      background-color: #388E3C;}
+    .navbar-inverse .navbar-nav > li > a {
+      color: white;}
+
 
 #spinner {
   height: 300px; }
@@ -34,7 +55,10 @@ body {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
-  opacity: 1; }
+  opacity: 1;
+  width: 185px;
+  float: left;
+  margin: 10px;}
   .market:before, .market:after {
     content: "";
     display: table; }
@@ -52,6 +76,9 @@ body {
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
+  .market img {
+    width: 100%;
+  }
   .market .upvote {
     display: block;
     margin: 7px 12px 0 0;
@@ -76,8 +103,51 @@ body {
     display: block;
     float: right;
     margin-top: 7px; }
+  .market-profile {
+    background-color: #F5F5F5;
+  }
+  .market-profile .wrapper {
+    padding-top: 50px;
+    width: 33%;
+    margin: 0 auto;
+    text-align: center;}
+  .market-profile .wrapper img{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;}
+  .market-info {
+    background-color: white;}
+  .market-info .wrapper {
+    width: 33%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px}
 
-.comments {
+.farmers {
+  background-color: tomato;
+}
+  .farmers .wrapper{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;}
+  .farmers .hovercard {
+    /*background-color: orange;*/
+    width: 100px;
+    position: relative;
+    float: left;
+    margin: 12px;}
+  .farmers .hovercard .useravatar img{
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);}
+
+
+/*.comments {
   list-style-type: none;
   margin: 0; }
   .comments li h4 {
@@ -89,7 +159,7 @@ body {
     .comments li h4 a {
       font-size: 12px; }
   .comments li p:last-child {
-    margin-bottom: 0; }
+    margin-bottom: 0; }*/
 
 .dropdown-menu span {
   display: block;
@@ -157,4 +227,48 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+/*map style code*/
+.leaflet-animated-div-icon {
+  border-radius: 50%;
+  border: none;
+  opacity: .2;
+  background: black;
+}
+
+.leaflet-div-icon {
+    border-radius: 50%;
+    border: none;
+    line-height: 30px;
+    font-family: verdana;
+    text-align: center;
+    color: white;
+    opacity: .8;
+    vertical-align:middle;
+}
+
+.leaflet-div-icon.public {
+    background: #49AFCD;
+}
+
+.leaflet-div-icon.private {
+    background: #DA4F49;
+}
+
+
+.map circle.callout {
+    stroke-width: 5px;
+    stroke-dasharray: 9, 5;
+    stroke-opacity: .8;
+    fill: none;
+    stroke: red;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 3px;
+    padding-bottom: 0;
 }
