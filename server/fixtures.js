@@ -54,45 +54,52 @@ if (Markets.find().count() === 0) {
     zipcode: '95605'
   });
 
+  Markets.insert({
+    userId: imanol._id,
+    title: 'Lake Washington Farm\'s Stand',
+    description: 'Produce of the Urban Farm Lake Washington Neighborhood.',
+    url: 'http://www.lakewurbanfarm.com',
+    organizer: 'Robert',
+    phone: '916-555-1234',
+    email: 'robert@urbanfarm.org',
+    ccard: true,
+    ebtcard: true,
+    address: 'Lake Washington Ave.',
+    city: 'West Sacramento',
+    zipcode: '95605'
+  });
 
-  // Markets.insert({
-  //   title: 'WestSac Farmer\'s Market',
-  //   description: 'Official West Sac Market',
-  //   userId: imanol._id,
-  //   author: imanol.profile.name,
-  //   url: 'http://inakigreif.com/introducing-telescope/',
-  //   submitted: new Date(now - 7 * 3600 * 1000),
-  //   commentsCount: 2,
-  //   upvoters: [], votes: 0
-  // });
+  Markets.insert({
+    userId: imanol._id,
+    title: '5th Ave. Farm\'s Stand',
+    description: 'Produce of the Urban Farm Broderick Neighborhood.',
+    url: 'http://www.lakewurbanfarm.com',
+    organizer: 'Sara',
+    phone: '916-555-1234',
+    email: 'robert@urbanfarm.org',
+    ccard: true,
+    ebtcard: true,
+    address: 'Lake Washington Ave.',
+    city: 'West Sacramento',
+    zipcode: '95605'
+  });
 
-  // Comments.insert({
-  //   marketId: telescopeId,
-  //   userId: imanol._id,
-  //   author: imanol.profile.name,
-  //   submitted: new Date(now - 5 * 3600 * 1000),
-  //   body: 'Interesting project Sacha, can I get involved?'
-  // });
-  //
-  // Comments.insert({
-  //   marketId: telescopeId,
-  //   userId: inaki._id,
-  //   author: inaki.profile.name,
-  //   submitted: new Date(now - 3 * 3600 * 1000),
-  //   body: 'You sure can Tom!'
-  // });
-
-  // Markets.insert({
-  //   title: '5th Ave. Farm Stand',
-  //   description: "tumakele bapokusu",
-  //   userId: imanol._id,
-  //   author: imanol.profile.name,
-  //   url: 'http://meteor.com',
-  //   submitted: new Date(now - 10 * 3600 * 1000),
-  //   commentsCount: 0,
-  //   upvoters: [], votes: 0
-  // });
-  //
+  for (var i=0; i<10; i++){
+    Markets.insert({
+      userId: imanol._id,
+      title: 'Farm\'s Stand #' + i,
+      description: 'Produce of the Urban Farm.',
+      url: 'http://www.lakewurbanfarm.com',
+      organizer: 'John',
+      phone: '916-555-1234',
+      email: 'john@urbanfarm.org',
+      ccard: true,
+      ebtcard: true,
+      address: 'West Capitol Ave.',
+      city: 'West Sacramento',
+      zipcode: '95605'
+    });
+  }
   // Markets.insert({
   //   title: 'Lake Washington Farm Stand',
   //   description: "tumakele bapokusu",

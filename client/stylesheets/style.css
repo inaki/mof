@@ -38,9 +38,9 @@ body {
       color: #FFF;
       background-color: #FF3A7F;
       border-color: #FF3A7F;
-      -webkit-box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);
--moz-box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);
-box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);}
+      -webkit-box-shadow: 1px 1px 5px 1px rgba(148,148,148,1);
+-moz-box-shadow: 1px 1px 5px 1px rgba(148,148,148,1);
+box-shadow: 1px 1px 5px 1px rgba(148,148,148,1);}
     .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
       background-color: #388E3C;}
     .navbar-inverse .navbar-nav > li > a {
@@ -118,9 +118,9 @@ box-shadow: 0px 10px 28px 0px rgba(148,148,148,1);}
   .market-info {
     background-color: white;}
   .market-info .wrapper {
-    width: 33%;
+    width: 25%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding: 20px}
 
 .farmers {
